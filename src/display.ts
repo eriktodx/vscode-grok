@@ -4,6 +4,7 @@ import {
   OUTPUT_CHANNEL_NAME,
   OUTPUT_METHOD_OUTPUT_CHANNEL,
   OUTPUT_METHOD_TAB,
+  OUTPUT_METHOD_TAB_PREVIEW,
 } from "./const";
 import { getOutputMethod } from "./config";
 
@@ -19,6 +20,34 @@ export async function displayResponseInTab(
   }
   vscode.window.showInformationMessage(
     "Grok finished. Responses shown in new tabs."
+  );
+}
+
+export async function displayResponseInTabPreview(
+  choices: GrokChoices
+): Promise<void> {
+  for (const [index, choice] of choices.entries()) {
+    // Create the markdown document
+    const document = await vscode.workspace.openTextDocument({
+      content: `# Grok Response ${index + 1}\n\n${choice.message.content}`,
+      language: "markdown"    });
+
+    // Store the URI before showing preview
+    const docUri = document.uri;
+
+    // Open preview to the side
+    await vscode.commands.executeCommand('markdown.showPreviewToSide', docUri);
+
+    // Close the original document without save prompt (require more testing...)
+    // if (document) {
+    //   await vscode.window.showTextDocument(document);
+    //   await vscode.commands.executeCommand('workbench.action.files.revert'); // Revert to avoid save prompt
+    //   await vscode.commands.executeCommand('workbench.action.closeActiveEditor');
+    // }
+  }
+
+  vscode.window.showInformationMessage(
+    "Grok finished. Responses shown in new preview tabs."
   );
 }
 
@@ -42,6 +71,8 @@ export async function displayResponse(choices: GrokChoices): Promise<void> {
     displayResponseInOutputChannel(choices);
   } else if (outputMethod === OUTPUT_METHOD_TAB) {
     await displayResponseInTab(choices);
+  } else if (outputMethod === OUTPUT_METHOD_TAB_PREVIEW) {
+    await displayResponseInTabPreview(choices);
   } else {
     vscode.window.showErrorMessage(
       "Invalid output method set in configuration!"
