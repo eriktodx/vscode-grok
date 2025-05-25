@@ -8,6 +8,7 @@ export const CONFIG_SHOW_PREVIEW = "showPreview";
 
 export const OUTPUT_CHANNEL_NAME = "Grok Response";
 export const OUTPUT_METHOD_TAB = "tab";
+export const OUTPUT_METHOD_TAB_PREVIEW = "tabPreview";
 export const OUTPUT_METHOD_OUTPUT_CHANNEL = "outputChannel";
 
 export const PREVIEW_PANEL_KEY = "grokPreview";

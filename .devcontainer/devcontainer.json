@@ -1,0 +1,17 @@
+{
+    "name": "Simply Grok Development Container",
+    "image": "mcr.microsoft.com/devcontainers/javascript-node",
+    "workspaceFolder": "/data",
+    "workspaceMount": "source=${localWorkspaceFolder},target=/data,type=bind,consistency=cached",
+    "features": {
+      "ghcr.io/devcontainers/features/git:1": {}
+    },
+    "customizations": {
+      "vscode": {
+        "extensions": [
+          "ms-vscode.extension-test-runner",
+          "dbaeumer.vscode-eslint"
+        ]
+      }
+    }
+}
