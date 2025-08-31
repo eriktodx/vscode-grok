@@ -1,6 +1,6 @@
 # Simply Grok for VSCode
 
-[![Version](https://img.shields.io/badge/Version-1.0.0-green)](https://github.com/eriktodx/vscode-grok/releases)
+[![Version](https://img.shields.io/badge/Version-1.1.0-green)](https://github.com/eriktodx/vscode-grok/releases)
 [![GitHub](https://img.shields.io/badge/GitHub-vscode--grok-blue)](https://github.com/eriktodx/vscode-grok)
 [![VSCode Extension](https://img.shields.io/badge/VSCode_Extension-Simply_Grok_for_VSCode-red)](https://marketplace.visualstudio.com/items?itemName=ErikKralj.vscode-grok)
 [![Open VSX Registry](https://img.shields.io/badge/Open_VSX-Simply_Grok_for_VSCode-purple)](https://open-vsx.org/extension/ErikKralj/vscode-grok)
