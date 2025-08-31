@@ -21,6 +21,12 @@ A Visual Studio Code extension that integrates with the xAI API to allow develop
 - **Data Preview** - Review the data being sent to the Grok API before submission, with configurable settings for when previews appear.
 - **Model Selection** - Select from a variety of Grok models (e.g., `grok-2`, `grok-3-fast`) to suit your needs.
 
+## Build, package and test
+
+1. Install global npm package `@vscode/vsce` with: `npm install -g @vscode/vsce`
+2. Build vsix extension with: `vsce package`
+3. Install extension by right clicking on the generated .vsix file and selecting `Install Extension VSIX`
+
 ## Installation
 
 1. Open Visual Studio Code.
