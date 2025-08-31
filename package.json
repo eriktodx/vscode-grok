@@ -2,7 +2,7 @@
   "name": "vscode-grok",
   "displayName": "Simply Grok for VSCode",
   "description": "Send source files to Grok and a question.",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "publisher": "ErikKralj",
   "repository": {
     "type": "git",
@@ -33,14 +33,10 @@
           "type": "string",
           "default": "grok-4",
           "enum": [
+            "grok-code-fast",
             "grok-4",
-            "grok-4-heavy",
             "grok-3",
-            "grok-3-mini",
-            "grok-3-fast-beta",
-            "grok-3-mini-fast-beta",
-            "grok-2-image-1212",
-            "grok-beta"
+            "grok-3-mini"
           ],
           "description": "The default xAI model to use with Grok."
         },
