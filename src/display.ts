@@ -12,7 +12,7 @@ export async function displayResponseInTab(
 ): Promise<void> {
   for (const [index, choice] of choices.entries()) {
     const document = await vscode.workspace.openTextDocument({
-      content: `# Grok Response ${index + 1}\n\n${choice.message.content}`,
+      content: `${choice.message.content}`,
       language: "markdown",
     });
     await vscode.window.showTextDocument(document, { preview: false });
@@ -26,7 +26,6 @@ export function displayResponseInOutputChannel(choices: GrokChoices): void {
   const outputChannel = vscode.window.createOutputChannel(OUTPUT_CHANNEL_NAME);
   outputChannel.clear();
   for (const [index, choice] of choices.entries()) {
-    outputChannel.appendLine(`# Grok Response ${index + 1}`);
     outputChannel.appendLine(choice.message.content);
     outputChannel.appendLine("\n---\n");
   }
