@@ -2,6 +2,13 @@
 
 All notable changes to the "vscode-grok" extension will be documented in this file
 
+## Version 1.1.0 (Aug 31, 2025)
+
+### Changed
+
+- Updated available Grok models
+- Updated README
+
 ## Version 1.0.0 (May 25, 2025)
 
 ### Changed
