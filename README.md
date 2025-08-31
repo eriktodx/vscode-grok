@@ -19,7 +19,7 @@ A Visual Studio Code extension that integrates with the xAI API to allow develop
 - **Ask Grok: Selected Text** - Highlight code and ask Grok for insights or assistance on just that selection.
 - **Customizable Output** - Choose to display Grok's responses in a new editor tab or the Output panel.
 - **Data Preview** - Review the data being sent to the Grok API before submission, with configurable settings for when previews appear.
-- **Model Selection** - Select from a variety of Grok models (e.g., `grok-2`, `grok-3-fast`) to suit your needs.
+- **Model Selection** - Select from a variety of Grok models to suit your needs.
 
 ## Build, package and test
 
@@ -52,9 +52,9 @@ A Visual Studio Code extension that integrates with the xAI API to allow develop
 Customize the extension via the VSCode Settings UI or `settings.json`:
 
 - **xAI API Key**: Store your API key securely (`vscodeGrok.apiKey`).
-- **Model**: Choose the Grok model to use (`vscodeGrok.model`), with options like `grok-2` (default), `grok-3-fast`, and more.
-- **Output Method**: Decide where responses appear (`vscodeGrok.outputMethod`): `tab` (default) or `outputChannel`.
-- **Show Preview**: Control when to preview data sent to Grok (`vscodeGrok.showPreview`): `always`, `workspace-only` (default), or `never`.
+- **Model**: Choose the Grok model to use (`vscodeGrok.model`).
+- **Output Method**: Decide where responses appear (`vscodeGrok.outputMethod`).
+- **Show Preview**: Control when to preview data sent to Grok (`vscodeGrok.showPreview`).
 
 ### Available Models
 
