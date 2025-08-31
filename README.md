@@ -50,16 +50,32 @@ Customize the extension via the VSCode Settings UI or `settings.json`:
 - **Output Method**: Decide where responses appear (`vscodeGrok.outputMethod`): `tab` (default) or `outputChannel`.
 - **Show Preview**: Control when to preview data sent to Grok (`vscodeGrok.showPreview`): `always`, `workspace-only` (default), or `never`.
 
-### Supported Models
+### Available Models
 
-- `grok-3-fast`: High-speed, high-performance model.
-- `grok-3-mini-fast`: Compact and fast for lightweight tasks.
-- `grok-3-mini`: Efficient smaller model.
-- `grok-3`: Powerful model for complex queries.
-- `grok-2-vision`: Supports text and vision inputs.
-- `grok-2`: Versatile general-purpose model (default).
-- `grok-vision-beta`: Experimental vision and text model.
-- `grok-beta`: Early-access model for testing.
+- **Grok 4**
+  - **API Model Name**: `grok-4`
+  - **Description**: A flagship model with advanced reasoning and multimodal capabilities (text and image input). Supports a 256,000-token context window. Ideal for complex tasks like data extraction, coding, and text summarization. Includes native tool use and real-time search integration.
+- **Grok 4 Heavy**
+  - **API Model Name**: `grok-4-heavy`
+  - **Description**: A more powerful version of Grok 4, designed for challenging tasks. Accessible through the SuperGrok Heavy tier.
+- **Grok 3**
+  - **API Model Name**: `grok-3`
+  - **Description**: A high-performance model with a 128,000-token context window. Focused on text-based interactions, suitable for enterprise use cases like data extraction and coding. Available in beta.
+- **Grok 3 Mini**
+  - **API Model Name**: `grok-3-mini`
+  - **Description**: A lightweight model with native reasoning. Optimized for logic-based tasks that don’t require deep domain knowledge. Available in beta.
+- **Grok 3 Fast Beta**
+  - **API Model Name**: `grok-3-fast-beta`
+  - **Description**: A faster variant of Grok 3, offering identical response quality but served on optimized infrastructure for quicker response times.
+- **Grok 3 Mini Fast Beta**
+  - **API Model Name**: `grok-3-mini-fast-beta`
+  - **Description**: A faster variant of Grok 3 Mini, designed for speed while maintaining response quality.
+- **Grok 2 Image**
+  - **API Model Name**: `grok-2-image-1212`
+  - **Description**: A model for text-to-image generation, suitable for visual storytelling, product mockups, or illustrated answers.
+- **Grok-beta**
+  - **API Model Name**: `grok-beta`
+  - **Description**: A preview model with a 128,000-token context window. Supports function calling and system prompts. Available in a multimodal version that can ingest images.
 
 For more information, see the [xAI Models Documentation](https://docs.x.ai/docs/models).
 
